@@ -15,6 +15,24 @@ https://developers.giphy.com/docs/optional-settings#language-support
 ![Settings](https://i.imgur.com/0TXw6Md.png)
 ![Spanish Preview](https://i.imgur.com/dWBI3n6.gif)
 
+## Development
+
+Install dependencies and package the app locally:
+
+```bash
+npm install
+npm run lint
+npm run typecheck
+npm run build
+```
+
+The packaged app is written to `dist/giphy_0.0.6.zip`.
+
+### Notes
+
+- The app now supports both slash command preview selection and direct `/giphy <query>` execution.
+- The build uses the Rocket.Chat Apps CLI and a local postinstall compatibility shim for `@rocket.chat/ui-kit` until the upstream packaging toolchain resolves that dependency correctly.
+
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome.<br />

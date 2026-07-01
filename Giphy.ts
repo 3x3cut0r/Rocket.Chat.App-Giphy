@@ -11,19 +11,25 @@ import { GiphyCommand } from './commands/GiphyCommand';
 import { GifGetter } from './helpers/GifGetter';
 
 export class Giphy extends App {
-    private gifGetter: GifGetter;
+    private readonly gifGetter = new GifGetter();
 
     constructor(info: IAppInfo, logger: ILogger) {
         super(info, logger);
-
-        this.gifGetter = new GifGetter();
     }
 
     public getGifGetter(): GifGetter {
         return this.gifGetter;
     }
 
-    protected async extendConfiguration(configuration: IConfigurationExtend, environmentRead: IEnvironmentRead): Promise<void> {
+    protected async extendConfiguration(configuration: IConfigurationExtend, _environmentRead: IEnvironmentRead): Promise<void> {
+        await this.configure(configuration);
+    }
+
+    public async initialize(configuration: IConfigurationExtend, _environmentRead: IEnvironmentRead): Promise<void> {
+        await this.configure(configuration);
+    }
+
+    private async configure(configuration: IConfigurationExtend): Promise<void> {
         await configuration.settings.provideSetting({
             id: 'giphy_apikey',
             type: SettingType.STRING,
