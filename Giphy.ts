@@ -11,13 +11,18 @@ import { GiphyCommand } from './commands/GiphyCommand';
 import { GifGetter } from './helpers/GifGetter';
 
 export class Giphy extends App {
-    private readonly gifGetter = new GifGetter();
+    private gifGetter?: GifGetter;
+    private isConfigured = false;
 
     constructor(info: IAppInfo, logger: ILogger) {
         super(info, logger);
     }
 
     public getGifGetter(): GifGetter {
+        if (!this.gifGetter) {
+            this.gifGetter = new GifGetter();
+        }
+
         return this.gifGetter;
     }
 
@@ -26,10 +31,17 @@ export class Giphy extends App {
     }
 
     public async initialize(configuration: IConfigurationExtend, _environmentRead: IEnvironmentRead): Promise<void> {
+        this.gifGetter = new GifGetter();
         await this.configure(configuration);
     }
 
     private async configure(configuration: IConfigurationExtend): Promise<void> {
+        if (this.isConfigured) {
+            return;
+        }
+
+        this.isConfigured = true;
+
         await configuration.settings.provideSetting({
             id: 'giphy_apikey',
             type: SettingType.STRING,
@@ -65,6 +77,15 @@ export class Giphy extends App {
             public: false,
             i18nLabel: 'Customize_GIPHY_Show_Title',
             i18nDescription: 'Customize_GIPHY_Show_Title_Description',
+        });
+        await configuration.settings.provideSetting({
+            id: 'giphy_preview_limit',
+            type: SettingType.STRING,
+            packageValue: '10',
+            required: true,
+            public: false,
+            i18nLabel: 'Customize_GIPHY_Preview_Limit',
+            i18nDescription: 'Customize_GIPHY_Preview_Limit_Description',
         });
         await configuration.slashCommands.provideSlashCommand(new GiphyCommand(this));
     }

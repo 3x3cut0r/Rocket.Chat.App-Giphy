@@ -7,6 +7,8 @@
   "Customize_GIPHY_Rating_Description": "The MPAA-style rating for this content. Examples include Y, G, PG, PG-13 and R",
   "Customize_GIPHY_Show_Title": "Show Image Titles",
   "Customize_GIPHY_Show_Title_Description": "Shows the title of the gif (if a title exists)",
+  "Customize_GIPHY_Preview_Limit": "Preview Result Limit",
+  "Customize_GIPHY_Preview_Limit_Description": "How many GIF previews should be shown per search. Allowed values: 1-25",
   "GIPHY_Command_Description": "Search for a matching GIF (Powered by GIPHY.com)",
   "GIPHY_Error_Sending": "An error occurred when trying to send the gif :disappointed_relieved:",
   "GIPHY_Preview_Title": "Results for",

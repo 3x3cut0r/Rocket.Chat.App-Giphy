@@ -1,0 +1,16 @@
+{
+  "Customize_GIPHY_APIKey": "GIPHY API-Schlüssel",
+  "Customize_GIPHY_APIKey_Description": "Bitte hole dir deinen eigenen GIPHY API-Schlüssel unter https://developers.giphy.com",
+  "Customize_GIPHY_Language": "Sprachcode für die Suche",
+  "Customize_GIPHY_Language_Description": "Verfügbare Sprachcodes findest du unter https://developers.giphy.com/docs/optional-settings#language-support",
+  "Customize_GIPHY_Rating": "Altersfreigabe",
+  "Customize_GIPHY_Rating_Description": "Die MPAA-ähnliche Altersfreigabe für diesen Inhalt. Beispiele sind Y, G, PG, PG-13 und R",
+  "Customize_GIPHY_Show_Title": "Bildtitel anzeigen",
+  "Customize_GIPHY_Show_Title_Description": "Zeigt den Titel des GIFs an (falls vorhanden)",
+  "Customize_GIPHY_Preview_Limit": "Limit für Vorschau-Ergebnisse",
+  "Customize_GIPHY_Preview_Limit_Description": "Wie viele GIF-Vorschauen pro Suche angezeigt werden sollen. Erlaubte Werte: 1-25",
+  "GIPHY_Command_Description": "Nach einem passenden GIF suchen (Powered by GIPHY.com)",
+  "GIPHY_Error_Sending": "Beim Senden des GIFs ist ein Fehler aufgetreten :disappointed_relieved:",
+  "GIPHY_Preview_Title": "Ergebnisse für",
+  "GIPHY_Search_Term": "katze fail"
+}

@@ -7,6 +7,8 @@
   "Customize_GIPHY_Rating_Description": "MPAA-stilbetyg för det här innehållet. Exempel är Y, G, PG, PG-13 och R",
   "Customize_GIPHY_Show_Title": "Visa bildtitlar",
   "Customize_GIPHY_Show_Title_Description": "Visar titeln på gif (om en titel finns)",
+  "Customize_GIPHY_Preview_Limit": "Gräns för förhandsgranskningsresultat",
+  "Customize_GIPHY_Preview_Limit_Description": "Hur många GIF-förhandsgranskningar som ska visas per sökning. Tillåtna värden: 1-25",
   "GIPHY_Command_Description": "Sök efter en matchande GIF (drivs av GIPHY.com)",
   "GIPHY_Error_Sending": "Ett fel uppstod vid försök att skicka gif :disappointed_relieved:",
   "GIPHY_Preview_Title": "Resultat för",

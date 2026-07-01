@@ -26,7 +26,7 @@ npm run typecheck
 npm run build
 ```
 
-The packaged app is written to `dist/giphy_0.0.7.zip`.
+The packaged app is written to `dist/giphy_0.0.8.zip`.
 
 ### Notes
 
@@ -42,6 +42,10 @@ Compared to the original repository, this fork currently includes:
 - local build, lint, and typecheck scripts
 - compatibility updates for newer Rocket.Chat Apps engine versions
 - direct `/giphy <query>` execution in addition to preview-based selection
+- `/giphy more <query>` for a fresh result page with the same keyword
+- `/giphy shuffle <query>` and `/giphy random <query>` for random result sets
+- configurable preview result limits in the app settings
+- German translations and a German search fallback when GIPHY returns no direct `de` matches
 - successful local packaging with the current Rocket.Chat Apps CLI
 
 ## 🤝 Contributing
