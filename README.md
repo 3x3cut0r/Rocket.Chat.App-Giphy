@@ -26,12 +26,23 @@ npm run typecheck
 npm run build
 ```
 
-The packaged app is written to `dist/giphy_0.0.6.zip`.
+The packaged app is written to `dist/giphy_0.0.7.zip`.
 
 ### Notes
 
 - The app now supports both slash command preview selection and direct `/giphy <query>` execution.
 - The build uses the Rocket.Chat Apps CLI and a local postinstall compatibility shim for `@rocket.chat/ui-kit` until the upstream packaging toolchain resolves that dependency correctly.
+
+## Changes in this fork
+
+Compared to the original repository, this fork currently includes:
+
+- a modernized TypeScript and Rocket.Chat Apps toolchain
+- ESLint-based linting instead of deprecated TSLint
+- local build, lint, and typecheck scripts
+- compatibility updates for newer Rocket.Chat Apps engine versions
+- direct `/giphy <query>` execution in addition to preview-based selection
+- successful local packaging with the current Rocket.Chat Apps CLI
 
 ## 🤝 Contributing
 
@@ -50,7 +61,6 @@ The initial Rocket.Chat GIPHY app was coded and updated by
 
 Please ⭐️ this repository if this project helped you!
 
-BTC: bc1q7srlgug4j3tuxznu4ulfdfxtgxg6d6yaskldpt<br />
 Paypal: [paypal.me/wreiske](https://paypal.me/wreiske)
 
 ## Related Apps
